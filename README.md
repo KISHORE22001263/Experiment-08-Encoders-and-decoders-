@@ -55,42 +55,77 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+```
+1.create module encoder and decoder.
 
+2.Get inputs and outputs for encoders and decoders.
 
+3.perform or operation for encoder and and logic for decoders.
+
+4.perform RTL LOGIC and get waveform.
+```
 
 ### PROGRAM 
-/*
-Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+```
+Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.   
+
+Developed by:KISHORE.B  
+
+RegisterNumber: 22001263
+```
+
+## ENCODER:
+```
+module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
+## DECODER:
+```
+module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&~c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
+```
+### RTL LOGIC   
+## ENCODER
+![encoder](https://user-images.githubusercontent.com/121484538/214761606-1b296af7-b939-4beb-a1ed-40c71d871d50.png)
+
+## DECODER:
+![decoder](https://user-images.githubusercontent.com/121484538/214761628-62e0fb8f-51df-4bf4-b9c3-91f677aa403f.png)
+
+
+### TIMING DIAGRAMS  
+- ## ENCODER:
+
+
+- ## DECODER:
 
 
 
 
+### TRUTH TABLE :
 
+- ## ENCODER:
+![Screenshot_20230126_113723](https://user-images.githubusercontent.com/121484538/214771633-587c66e7-3bc3-42f4-be6f-af93d33137b6.png)
 
-### RTL LOGIC  
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS  
-
-
-
-
-
-### TRUTH TABLE 
-
-
+- ## DECODER:
+![Screenshot_20230126_114810](https://user-images.githubusercontent.com/121484538/214771609-3ac6d95d-5356-4e69-9fc4-528000efe4ca.png)
 
 
 
 
 ### RESULTS 
+Thus the program to desing encoder and decoder is done.
