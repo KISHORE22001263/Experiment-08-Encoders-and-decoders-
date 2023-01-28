@@ -109,9 +109,11 @@ endmodule
 
 ### TIMING DIAGRAMS  
 - ## ENCODER:
+![201480843-3b04c3ea-9df1-4746-852d-b7b0337119f2](https://user-images.githubusercontent.com/121484538/215238269-61fd1489-8e87-41a9-b1f0-d638ba11af1b.png)
 
 
 - ## DECODER:
+![201480849-07fb9b44-fc4c-4f76-8087-68b4524fd1b1](https://user-images.githubusercontent.com/121484538/215238275-0966d2a7-0138-48f7-bf0b-22b7ae124c96.png)
 
 
 
